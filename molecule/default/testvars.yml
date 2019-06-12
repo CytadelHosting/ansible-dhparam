@@ -1,0 +1,4 @@
+---
+# vars to test role
+
+dhparam_size: 2048

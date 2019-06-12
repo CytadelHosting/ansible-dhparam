@@ -18,6 +18,10 @@
     path: "{{ dhparam_file | dirname }}"
     state: directory
 
+- name: Print dhparam filename
+  debug:
+    msg: "file to create : {{ dhparam_file }}"
+
 - name: The Diffie-Hellman parameter file is generated
   command: "{{ dhparam_openssl_binary }} dhparam -out '{{ dhparam_file }}' {{ dhparam_size }}"
   args:
